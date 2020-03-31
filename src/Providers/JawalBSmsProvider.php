@@ -1,19 +1,13 @@
 <?php
-/**
- * Copyright MyTh
- * Website: https://4MyTh.com
- * Email: mythpe@gmail.com
- * Copyright © 2006-2020 MyTh All rights reserved.
- */
 
-namespace MyTh\Support\JawalBSms\Providers;
+namespace Myth\Support\JawalBSms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use MyTh\Support\JawalBSms\SmsWrapper;
+use Myth\Support\JawalBSms\SmsWrapper;
 
 /**
  * Class JawalBSmsProvider
- * @package MyTh\Support\JawalBSms\Providers
+ * @package Myth\Support\JawalBSms\Providers
  */
 class JawalBSmsProvider extends ServiceProvider{
 

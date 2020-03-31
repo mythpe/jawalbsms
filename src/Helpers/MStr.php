@@ -1,16 +1,10 @@
 <?php
-/**
- * Copyright MyTh
- * Website: https://4MyTh.com
- * Email: mythpe@gmail.com
- * Copyright © 2006-2020 MyTh All rights reserved.
- */
 
-namespace MyTh\Support\JawalBSms\Helpers;
+namespace Myth\Support\JawalBSms\Helpers;
 
 /**
  * Class MStr
- * @package MyTh\Support\JawalBSms\Helpers
+ * @package Myth\Support\JawalBSms\Helpers
  */
 class MStr{
 

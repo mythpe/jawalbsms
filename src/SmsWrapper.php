@@ -1,19 +1,13 @@
 <?php
-/**
- * Copyright MyTh
- * Website: https://4MyTh.com
- * Email: mythpe@gmail.com
- * Copyright © 2006-2020 MyTh All rights reserved.
- */
 
-namespace MyTh\Support\JawalBSms;
+namespace Myth\Support\JawalBSms;
 
 use GuzzleHttp\Client;
-use MyTh\Support\JawalBSms\Helpers\MStr;
+use Myth\Support\JawalBSms\Helpers\MStr;
 
 /**
  * Class SmsWrapper
- * @package MyTh\Support\JawalBSms
+ * @package Myth\Support\JawalBSms
  */
 class SmsWrapper{
 
@@ -40,7 +34,7 @@ class SmsWrapper{
         $this->options = $options;
 
         !array_key_exists('headers', $this->options) && ($this->options['headers'] = []);
-        $this->options['headers']['X-REQUEST-WITH'] = "MyTh Jawalbsms Laravel Wrapper 1.0";
+        $this->options['headers']['X-REQUEST-WITH'] = "Myth Jawalbsms Laravel Wrapper 1.0";
         $this->client = new Client($this->options);
     }
 

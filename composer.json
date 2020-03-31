@@ -3,7 +3,7 @@
   "type": "library",
   "description": "jawalbsms Laravel Wrapper",
   "keywords": [
-    "MyTh",
+    "Myth",
     "4myth",
     "jawalbsms",
     "sms"
@@ -23,7 +23,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "MyTh\\Support\\JawalBSms\\": "src/"
+      "Myth\\Support\\JawalBSms\\": "src/"
     },
     "files": [
       "src/Helpers/Functions.php"
@@ -32,10 +32,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "MyTh\\Support\\JawalBSms\\Providers\\JawalBSmsProvider"
+        "Myth\\Support\\JawalBSms\\Providers\\JawalBSmsProvider"
       ],
       "aliases": {
-        "JawalBSms": "MyTh\\Support\\JawalBSms\\Facades\\JawalBSms"
+        "JawalBSms": "Myth\\Support\\JawalBSms\\Facades\\JawalBSms"
       }
     }
   },
