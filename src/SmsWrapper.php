@@ -49,20 +49,27 @@ class SmsWrapper{
         if(!$message || !$numbers){
             return null;
         }
-        $request = $this->client->get(
-            static::JAWALBSMS_URL,
-            [
-                'query' => [
-                    'user'    => $this->username,
-                    'pass'    => $this->password,
-                    'to'      => $numbers,
-                    'unicode' => 'u',
-                    'message' => $message,
-                    'sender'  => $this->senderName,
-                ],
-            ]
-        );
-        return $this->serializeResponse($request->getBody()->getContents());
+        try{
+            $request = $this->client->get(
+                static::JAWALBSMS_URL,
+                [
+                    'query' => [
+                        'user'    => $this->username,
+                        'pass'    => $this->password,
+                        'to'      => $numbers,
+                        'unicode' => 'u',
+                        'message' => $message,
+                        'sender'  => $this->senderName,
+                    ],
+                ]
+            );
+            $response = $request->getBody()->getContents();
+        }
+        catch(\Exception $exception){
+            $response = "Unknown Error!";
+        }
+
+        return $this->serializeResponse($response);
     }
 
     /**
@@ -105,7 +112,7 @@ class SmsWrapper{
         break;
 
         default:
-            return "unknown Error !";
+            return $body;
         break;
         }
     }
