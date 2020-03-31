@@ -22,7 +22,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "MyTh\\Support\\JawalBSms": "src/"
+      "MyTh\\Support\\JawalBSms\\": "src/"
     },
     "files": [
       "src/Helpers/Functions.php"
