@@ -86,8 +86,8 @@ class SmsWrapper{
      * @return bool|string
      */
     protected function serializeResponse($body = ''){
-        $body = preg_replace('/[^\d+\-]/', "", $body);
         if(preg_match_all('/(MSG_ID)/', strtoupper($body))) return true;
+        $body = preg_replace('/[^\d+\-]/', "", $body);
         switch($body){
         case '-100':
             return "Missing parameters (not exist or empty) Username + password.";
